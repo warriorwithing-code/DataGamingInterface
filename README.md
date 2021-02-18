@@ -1,2 +1,0 @@
-# DataGamingInterface
-project students
