@@ -1,6 +1,6 @@
 ﻿namespace DataGamingInterface
 {
-    partial class Form1
+    partial class FormWelcome
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -28,13 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.buttonEnter = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // button1
+            // 
+            this.buttonEnter.Location = new System.Drawing.Point(319, 266);
+            this.buttonEnter.Name = "Entrar";
+            this.buttonEnter.Size = new System.Drawing.Size(100, 30);
+            this.buttonEnter.TabIndex = 0;
+            this.buttonEnter.Text = "Entrar";
+            this.buttonEnter.UseVisualStyleBackColor = true;
+            // 
+            // FormWelcome
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.Controls.Add(this.buttonEnter);
+            this.Name = "FormWelcome";
+            this.Text = "DataGamingInterface";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button buttonEnter;
     }
 }
 
