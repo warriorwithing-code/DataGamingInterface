@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataGamingInterface.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,14 @@ namespace DataGamingInterface
         public FormWelcome()
         {
             InitializeComponent();
+        }
+
+        private void ButtonEnter_Click(object sender, EventArgs e)
+        {
+            FormHome formHome = new FormHome();
+            this.Hide();
+            formHome.ShowDialog();
+            this.Close();
         }
     }
 }
