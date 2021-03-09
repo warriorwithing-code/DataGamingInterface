@@ -11,5 +11,6 @@ namespace Domain.Entities
         public string name;
         public string gender;
         public int players;
+        public string details;
     }
 }

@@ -12,14 +12,18 @@ namespace DataGamingInterface.Forms
 {
     public partial class FormHome : Form
     {
+        SelectGame formSelectGame;
         public FormHome()
         {
             InitializeComponent();
         }
 
-        private void Button1_Click(object sender, EventArgs e)
+        private void ButtonSelectGame_Click(object sender, EventArgs e)
         {
-
+            formSelectGame = new SelectGame();
+            this.Hide();
+            formSelectGame.ShowDialog();
+            this.Close();
         }
     }
 }

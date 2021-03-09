@@ -13,6 +13,7 @@ namespace DataGamingInterface
 {
     public partial class FormWelcome : Form
     {
+        FormHome formHome;
         public FormWelcome()
         {
             InitializeComponent();
@@ -20,7 +21,7 @@ namespace DataGamingInterface
 
         private void ButtonEnter_Click(object sender, EventArgs e)
         {
-            FormHome formHome = new FormHome();
+            formHome = new FormHome();
             this.Hide();
             formHome.ShowDialog();
             this.Close();

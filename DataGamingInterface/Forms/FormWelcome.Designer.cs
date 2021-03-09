@@ -33,7 +33,7 @@
             // 
             // buttonEnter
             // 
-            this.buttonEnter.Location = new System.Drawing.Point(319, 266);
+            this.buttonEnter.Location = new System.Drawing.Point(320, 260);
             this.buttonEnter.Name = "buttonEnter";
             this.buttonEnter.Size = new System.Drawing.Size(100, 30);
             this.buttonEnter.TabIndex = 0;
@@ -46,6 +46,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Controls.Add(this.buttonEnter);
             this.Name = "FormWelcome";
             this.Text = "DataGamingInterface";
