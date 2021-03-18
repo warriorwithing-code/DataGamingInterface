@@ -34,8 +34,15 @@ namespace DataGamingInterface.Forms
         private void InitializeComponent()
         {
             this.checkedListBoxSelectGame = new System.Windows.Forms.CheckedListBox();
-            this.buttonSelect = new System.Windows.Forms.Button();
+            this.buttonAdd = new System.Windows.Forms.Button();
             this.textBoxResult = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.buttonUpdate = new System.Windows.Forms.Button();
+            this.buttonSearchGame = new System.Windows.Forms.Button();
+            this.CheckedListBoxGamesPrepared = new System.Windows.Forms.CheckedListBox();
+            this.textBoxShowGame = new System.Windows.Forms.TextBox();
+            this.buttonRoll = new System.Windows.Forms.Button();
+            this.buttonClear = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // checkedListBoxSelectGame
@@ -47,30 +54,104 @@ namespace DataGamingInterface.Forms
             this.checkedListBoxSelectGame.TabIndex = 0;
             this.checkedListBoxSelectGame.SelectedIndexChanged += new System.EventHandler(this.CheckedListBoxSelectGame_SelectedIndexChanged);
             // 
-            // buttonSelect
+            // buttonAdd
             // 
-            this.buttonSelect.Location = new System.Drawing.Point(317, 354);
-            this.buttonSelect.Name = "buttonSelect";
-            this.buttonSelect.Size = new System.Drawing.Size(120, 31);
-            this.buttonSelect.TabIndex = 1;
-            this.buttonSelect.Text = "Tirar dado";
-            this.buttonSelect.UseVisualStyleBackColor = true;
-            this.buttonSelect.Click += new System.EventHandler(this.ButtonSelect_Click);
+            this.buttonAdd.Location = new System.Drawing.Point(376, 94);
+            this.buttonAdd.Name = "buttonAdd";
+            this.buttonAdd.Size = new System.Drawing.Size(120, 31);
+            this.buttonAdd.TabIndex = 1;
+            this.buttonAdd.Text = "Añadir Juego";
+            this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.ButtonAdd_Click);
             // 
-            // textBox1
+            // textBoxResult
             // 
-            this.textBoxResult.Location = new System.Drawing.Point(300, 194);
-            this.textBoxResult.Name = "textBox1";
-            this.textBoxResult.Size = new System.Drawing.Size(157, 20);
+            this.textBoxResult.Location = new System.Drawing.Point(357, 55);
+            this.textBoxResult.Name = "textBoxResult";
+            this.textBoxResult.Size = new System.Drawing.Size(164, 20);
             this.textBoxResult.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Matrix", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(329, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(216, 16);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Escriba el juego que desee añadir";
+            // 
+            // buttonUpdate
+            // 
+            this.buttonUpdate.Location = new System.Drawing.Point(29, 405);
+            this.buttonUpdate.Name = "buttonUpdate";
+            this.buttonUpdate.Size = new System.Drawing.Size(75, 23);
+            this.buttonUpdate.TabIndex = 4;
+            this.buttonUpdate.Text = "Actualizar Juego";
+            this.buttonUpdate.UseVisualStyleBackColor = true;
+            this.buttonUpdate.Click += new System.EventHandler(this.ButtonUpdate_Click);
+            // 
+            // buttonSearchGame
+            // 
+            this.buttonSearchGame.Location = new System.Drawing.Point(139, 405);
+            this.buttonSearchGame.Name = "buttonSearchGame";
+            this.buttonSearchGame.Size = new System.Drawing.Size(75, 23);
+            this.buttonSearchGame.TabIndex = 5;
+            this.buttonSearchGame.Text = "Buscar Juego";
+            this.buttonSearchGame.UseVisualStyleBackColor = true;
+            this.buttonSearchGame.Click += new System.EventHandler(this.ButtonSearchGame_Click);
+            // 
+            // CheckedListBoxGamesPrepared
+            // 
+            this.CheckedListBoxGamesPrepared.FormattingEnabled = true;
+            this.CheckedListBoxGamesPrepared.Location = new System.Drawing.Point(631, 216);
+            this.CheckedListBoxGamesPrepared.Name = "CheckedListBoxGamesPrepared";
+            this.CheckedListBoxGamesPrepared.Size = new System.Drawing.Size(157, 169);
+            this.CheckedListBoxGamesPrepared.TabIndex = 6;
+            this.CheckedListBoxGamesPrepared.SelectedIndexChanged += new System.EventHandler(this.CheckedListBoxGamesPrepared_SelectedIndexChanged);
+            // 
+            // textBoxShowGame
+            // 
+            this.textBoxShowGame.Location = new System.Drawing.Point(357, 230);
+            this.textBoxShowGame.Name = "textBoxShowGame";
+            this.textBoxShowGame.Size = new System.Drawing.Size(164, 20);
+            this.textBoxShowGame.TabIndex = 7;
+            // 
+            // buttonRoll
+            // 
+            this.buttonRoll.Location = new System.Drawing.Point(376, 300);
+            this.buttonRoll.Name = "button1";
+            this.buttonRoll.Size = new System.Drawing.Size(120, 44);
+            this.buttonRoll.TabIndex = 8;
+            this.buttonRoll.Text = "Roll";
+            this.buttonRoll.UseVisualStyleBackColor = true;
+            this.buttonRoll.Click += new System.EventHandler(this.ButtonRoll_Click);
+            // 
+            // buttonClear
+            // 
+            this.buttonClear.Location = new System.Drawing.Point(673, 405);
+            this.buttonClear.Name = "buttonClear";
+            this.buttonClear.Size = new System.Drawing.Size(75, 23);
+            this.buttonClear.TabIndex = 9;
+            this.buttonClear.Text = "Clear";
+            this.buttonClear.UseVisualStyleBackColor = true;
+            this.buttonClear.Click += new System.EventHandler(this.ButtonClear_Click);
             // 
             // SelectGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::DataGamingInterface.Properties.Resources.external_content_duckduckgo_com;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonClear);
+            this.Controls.Add(this.buttonRoll);
+            this.Controls.Add(this.textBoxShowGame);
+            this.Controls.Add(this.CheckedListBoxGamesPrepared);
+            this.Controls.Add(this.buttonSearchGame);
+            this.Controls.Add(this.buttonUpdate);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxResult);
-            this.Controls.Add(this.buttonSelect);
+            this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.checkedListBoxSelectGame);
             this.Name = "SelectGame";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -85,13 +166,21 @@ namespace DataGamingInterface.Forms
             items = new ObjectCollection(checkedListBoxSelectGame);
             foreach (var game in checkListOperations.addItemList())
             {
-                items.Add(game);
+                this.checkedListBoxSelectGame.Items.Add(game);
             };
         }
+
         #endregion
 
         private System.Windows.Forms.CheckedListBox checkedListBoxSelectGame;
-        private System.Windows.Forms.Button buttonSelect;
+        private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.TextBox textBoxResult;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button buttonUpdate;
+        private System.Windows.Forms.Button buttonSearchGame;
+        private System.Windows.Forms.CheckedListBox CheckedListBoxGamesPrepared;
+        private System.Windows.Forms.TextBox textBoxShowGame;
+        private System.Windows.Forms.Button buttonRoll;
+        private System.Windows.Forms.Button buttonClear;
     }
 }
