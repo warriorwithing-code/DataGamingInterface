@@ -31,22 +31,25 @@
             this.buttonEnter = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // buttonEnter
             // 
-            this.buttonEnter.Location = new System.Drawing.Point(319, 266);
-            this.buttonEnter.Name = "Entrar";
+            this.buttonEnter.Location = new System.Drawing.Point(320, 260);
+            this.buttonEnter.Name = "buttonEnter";
             this.buttonEnter.Size = new System.Drawing.Size(100, 30);
             this.buttonEnter.TabIndex = 0;
             this.buttonEnter.Text = "Entrar";
             this.buttonEnter.UseVisualStyleBackColor = true;
+            this.buttonEnter.Click += new System.EventHandler(this.ButtonEnter_Click);
             // 
             // FormWelcome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::DataGamingInterface.Properties.Resources.external_content_duckduckgo_com;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.buttonEnter);
             this.Name = "FormWelcome";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DataGamingInterface";
             this.ResumeLayout(false);
 

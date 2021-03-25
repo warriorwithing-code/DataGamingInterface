@@ -1,5 +1,4 @@
-﻿using DataGamingInterface.Forms;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,21 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DataGamingInterface
+namespace DataGamingInterface.Forms
 {
-    public partial class FormWelcome : Form
+    public partial class FormHome : Form
     {
-        FormHome formHome;
-        public FormWelcome()
+        SelectGame formSelectGame;
+        public FormHome()
         {
             InitializeComponent();
         }
 
-        private void ButtonEnter_Click(object sender, EventArgs e)
+        private void ButtonSelectGame_Click(object sender, EventArgs e)
         {
-            formHome = new FormHome();
+            formSelectGame = new SelectGame();
             this.Hide();
-            formHome.ShowDialog();
+            formSelectGame.ShowDialog();
             this.Close();
         }
     }
