@@ -30,14 +30,14 @@
         {
             this.buttonSelectGame = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonGameEdit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonSelectGame
             // 
-            this.buttonSelectGame.Location = new System.Drawing.Point(274, 12);
+            this.buttonSelectGame.Location = new System.Drawing.Point(303, 134);
             this.buttonSelectGame.Name = "buttonSelectGame";
-            this.buttonSelectGame.Size = new System.Drawing.Size(207, 352);
+            this.buttonSelectGame.Size = new System.Drawing.Size(190, 230);
             this.buttonSelectGame.TabIndex = 0;
             this.buttonSelectGame.Text = "Seleccionar Juego";
             this.buttonSelectGame.UseVisualStyleBackColor = true;
@@ -45,31 +45,34 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(541, 12);
+            this.button1.Location = new System.Drawing.Point(580, 134);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(211, 352);
+            this.button1.Size = new System.Drawing.Size(190, 230);
             this.button1.TabIndex = 1;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // buttonGameEdit
             // 
-            this.button2.Location = new System.Drawing.Point(29, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(190, 352);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonGameEdit.Location = new System.Drawing.Point(28, 134);
+            this.buttonGameEdit.Name = "buttonGameEdit";
+            this.buttonGameEdit.Size = new System.Drawing.Size(190, 230);
+            this.buttonGameEdit.TabIndex = 2;
+            this.buttonGameEdit.Text = "Recursos de juego";
+            this.buttonGameEdit.UseVisualStyleBackColor = true;
+            this.buttonGameEdit.Click += new System.EventHandler(this.ButtonGameEdit_Click);
             // 
             // FormHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::DataGamingInterface.Properties.Resources.external_content_duckduckgo_com;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button2);
+            this.ClientSize = new System.Drawing.Size(804, 461);
+            this.Controls.Add(this.buttonGameEdit);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.buttonSelectGame);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormHome";
@@ -81,6 +84,6 @@
 
         private System.Windows.Forms.Button buttonSelectGame;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonGameEdit;
     }
 }

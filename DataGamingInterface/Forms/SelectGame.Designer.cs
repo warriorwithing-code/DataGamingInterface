@@ -120,7 +120,7 @@ namespace DataGamingInterface.Forms
             // buttonRoll
             // 
             this.buttonRoll.Location = new System.Drawing.Point(376, 300);
-            this.buttonRoll.Name = "button1";
+            this.buttonRoll.Name = "buttonRoll";
             this.buttonRoll.Size = new System.Drawing.Size(120, 44);
             this.buttonRoll.TabIndex = 8;
             this.buttonRoll.Text = "Roll";
@@ -142,7 +142,7 @@ namespace DataGamingInterface.Forms
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::DataGamingInterface.Properties.Resources.external_content_duckduckgo_com;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(804, 461);
             this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.buttonRoll);
             this.Controls.Add(this.textBoxShowGame);
@@ -153,6 +153,8 @@ namespace DataGamingInterface.Forms
             this.Controls.Add(this.textBoxResult);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.checkedListBoxSelectGame);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "SelectGame";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SelectGame";

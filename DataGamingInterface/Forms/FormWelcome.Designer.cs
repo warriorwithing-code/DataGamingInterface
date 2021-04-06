@@ -46,8 +46,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::DataGamingInterface.Properties.Resources.external_content_duckduckgo_com;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(804, 461);
             this.Controls.Add(this.buttonEnter);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormWelcome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DataGamingInterface";
