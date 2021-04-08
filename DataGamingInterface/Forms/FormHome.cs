@@ -13,7 +13,7 @@ namespace DataGamingInterface.Forms
     public partial class FormHome : Form
     {
         SelectGame formSelectGame;
-        FormGameEdit formGameEdit;
+        FormGameEdit formGameEdit= new FormGameEdit();
         public FormHome()
         {
             InitializeComponent();
@@ -29,7 +29,6 @@ namespace DataGamingInterface.Forms
 
         private void ButtonGameEdit_Click(object sender, EventArgs e)
         {
-            formGameEdit = new FormGameEdit();
             this.Hide();
             formGameEdit.ShowDialog();
             this.Close();

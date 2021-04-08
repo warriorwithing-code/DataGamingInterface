@@ -71,6 +71,7 @@
       <DependentUpon>SelectGame.cs</DependentUpon>
     </Compile>
     <Compile Include="Process\CheckBoxListOperations.cs" />
+    <Compile Include="Process\OperationsGame.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\FormGameEdit.resx">
@@ -108,8 +109,14 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
+    <ProjectReference Include="..\Aplication\Aplication.csproj">
+      <Project>{139A5AB3-300B-4B6A-BD1F-793E97A6A2AB}</Project>
+      <Name>Aplication</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Images\DataGaming.ico" />
     <Content Include="Resources\Images\external-content.duckduckgo.com.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

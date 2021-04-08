@@ -15,6 +15,9 @@ namespace DataGamingInterface.Forms
     {
         List<string> ListGamesSelects = new List<string>();
         CheckBoxListOperations heckBoxListOperations = new CheckBoxListOperations();
+        FormHome formHome = new FormHome();
+        OperationsGame operationsGame = new OperationsGame();
+
         public SelectGame()
         {
             InitializeComponent();
@@ -38,6 +41,7 @@ namespace DataGamingInterface.Forms
 
         private void ButtonAdd_Click(object sender, EventArgs e)
         {
+            operationsGame.Add_Game(textBoxResult.Text);
             this.checkedListBoxSelectGame.Items.Add(textBoxResult.Text);
         }
 
@@ -72,6 +76,13 @@ namespace DataGamingInterface.Forms
         private void ButtonClear_Click(object sender, EventArgs e)
         {
             CheckedListBoxGamesPrepared.Items.Clear();
+        }
+
+        private void ButtonBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            formHome.ShowDialog();
+            this.Close();
         }
     }
 }

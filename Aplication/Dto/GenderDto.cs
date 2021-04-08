@@ -8,5 +8,8 @@ namespace Aplication.Dto
 {
     public class GenderDto
     {
+        public int Id { get; set; }
+        public string Type { get; set; }
+        public string Subtype { get; set; }
     }
 }

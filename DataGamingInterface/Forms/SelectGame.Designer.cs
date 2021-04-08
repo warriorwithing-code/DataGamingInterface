@@ -33,6 +33,7 @@ namespace DataGamingInterface.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SelectGame));
             this.checkedListBoxSelectGame = new System.Windows.Forms.CheckedListBox();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.textBoxResult = new System.Windows.Forms.TextBox();
@@ -43,6 +44,9 @@ namespace DataGamingInterface.Forms
             this.textBoxShowGame = new System.Windows.Forms.TextBox();
             this.buttonRoll = new System.Windows.Forms.Button();
             this.buttonClear = new System.Windows.Forms.Button();
+            this.Back = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // checkedListBoxSelectGame
@@ -56,7 +60,7 @@ namespace DataGamingInterface.Forms
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(376, 94);
+            this.buttonAdd.Location = new System.Drawing.Point(377, 133);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(120, 31);
             this.buttonAdd.TabIndex = 1;
@@ -66,7 +70,7 @@ namespace DataGamingInterface.Forms
             // 
             // textBoxResult
             // 
-            this.textBoxResult.Location = new System.Drawing.Point(357, 55);
+            this.textBoxResult.Location = new System.Drawing.Point(357, 40);
             this.textBoxResult.Name = "textBoxResult";
             this.textBoxResult.Size = new System.Drawing.Size(164, 20);
             this.textBoxResult.TabIndex = 2;
@@ -75,11 +79,11 @@ namespace DataGamingInterface.Forms
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Matrix", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(329, 21);
+            this.label1.Location = new System.Drawing.Point(304, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(216, 16);
+            this.label1.Size = new System.Drawing.Size(274, 16);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Escriba el juego que desee añadir";
+            this.label1.Text = "Escriba el juego que desee añadir y genero\r\n";
             // 
             // buttonUpdate
             // 
@@ -137,12 +141,43 @@ namespace DataGamingInterface.Forms
             this.buttonClear.UseVisualStyleBackColor = true;
             this.buttonClear.Click += new System.EventHandler(this.ButtonClear_Click);
             // 
+            // Back
+            // 
+            this.Back.Location = new System.Drawing.Point(398, 405);
+            this.Back.Name = "Back";
+            this.Back.Size = new System.Drawing.Size(75, 23);
+            this.Back.TabIndex = 10;
+            this.Back.Text = "Atras";
+            this.Back.UseVisualStyleBackColor = true;
+            this.Back.Click += new System.EventHandler(this.ButtonBack_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(376, 94);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 11;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Matrix", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(386, 77);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(101, 14);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Añada un genero";
+            // 
             // SelectGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::DataGamingInterface.Properties.Resources.external_content_duckduckgo_com;
             this.ClientSize = new System.Drawing.Size(804, 461);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.Back);
             this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.buttonRoll);
             this.Controls.Add(this.textBoxShowGame);
@@ -153,6 +188,7 @@ namespace DataGamingInterface.Forms
             this.Controls.Add(this.textBoxResult);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.checkedListBoxSelectGame);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "SelectGame";
@@ -184,5 +220,8 @@ namespace DataGamingInterface.Forms
         private System.Windows.Forms.TextBox textBoxShowGame;
         private System.Windows.Forms.Button buttonRoll;
         private System.Windows.Forms.Button buttonClear;
+        private System.Windows.Forms.Button Back;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label2;
     }
 }

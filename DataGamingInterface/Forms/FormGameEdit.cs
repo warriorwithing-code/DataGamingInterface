@@ -16,5 +16,10 @@ namespace DataGamingInterface.Forms
         {
             InitializeComponent();
         }
+
+        private void CheckedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

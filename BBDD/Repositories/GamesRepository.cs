@@ -1,4 +1,5 @@
 ﻿using BBDD.Interfaces;
+using Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,17 +8,17 @@ using System.Threading.Tasks;
 
 namespace BBDD.Repositories
 {
-    class GamesRepository : IRepository
+    public class GamesRepository : IRepository
     {
-        public void add(string name, string info)
+        public void add(Game game)
         {
             using (DataGamingInterfaceDataBaseEntities db =new DataGamingInterfaceDataBaseEntities())
             {
-                Games game = new Games();
-                game.Name = name;
-                game.Info = info;
+                Games gameSave = new Games();
+                gameSave.Name = game.getName();
+                gameSave.Info = game.getInfo();
 
-                db.Games.Add(game);
+                db.Games.Add(gameSave);
                 db.SaveChanges();
             }
         }

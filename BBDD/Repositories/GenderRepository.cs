@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BBDD.Repositories
 {
-    class GenderRepository
+    public class GenderRepository
     {
         public int Id { get; set; }
         public string Type { get; set; }
