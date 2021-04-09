@@ -34,7 +34,7 @@
             // 
             // buttonEnter
             // 
-            this.buttonEnter.Location = new System.Drawing.Point(320, 260);
+            this.buttonEnter.Location = new System.Drawing.Point(365, 213);
             this.buttonEnter.Name = "buttonEnter";
             this.buttonEnter.Size = new System.Drawing.Size(100, 30);
             this.buttonEnter.TabIndex = 0;
@@ -46,7 +46,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::DataGamingInterface.Properties.Resources.external_content_duckduckgo_com;
+            this.BackgroundImage = global::DataGamingInterface.Properties.Resources.obsidian;
             this.ClientSize = new System.Drawing.Size(804, 461);
             this.Controls.Add(this.buttonEnter);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

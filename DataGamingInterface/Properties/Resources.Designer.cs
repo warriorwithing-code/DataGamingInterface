@@ -63,9 +63,9 @@ namespace DataGamingInterface.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap external_content_duckduckgo_com {
+        internal static System.Drawing.Bitmap obsidian {
             get {
-                object obj = ResourceManager.GetObject("external_content_duckduckgo_com", resourceCulture);
+                object obj = ResourceManager.GetObject("obsidian", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

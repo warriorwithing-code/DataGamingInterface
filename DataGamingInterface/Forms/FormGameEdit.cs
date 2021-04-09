@@ -21,5 +21,15 @@ namespace DataGamingInterface.Forms
         {
 
         }
+
+        private void ButtonEditGameAndSave_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ButtonAddNewGame_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -118,6 +118,7 @@
   <ItemGroup>
     <Content Include="Resources\Images\DataGaming.ico" />
     <Content Include="Resources\Images\external-content.duckduckgo.com.png" />
+    <Content Include="Resources\Images\obsidian.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
