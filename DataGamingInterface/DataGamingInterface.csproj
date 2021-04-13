@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\FormAddGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormAddGame.Designer.cs">
+      <DependentUpon>FormAddGame.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormGameEdit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +80,9 @@
     <Compile Include="Process\OperationsGame.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\FormAddGame.resx">
+      <DependentUpon>FormAddGame.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormGameEdit.resx">
       <DependentUpon>FormGameEdit.cs</DependentUpon>
     </EmbeddedResource>
@@ -117,6 +126,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\Images\DataGaming.ico" />
+    <Content Include="Resources\Images\DataGamingInterfaceText.png" />
     <Content Include="Resources\Images\external-content.duckduckgo.com.png" />
     <Content Include="Resources\Images\obsidian.jpg" />
   </ItemGroup>
