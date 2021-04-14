@@ -38,6 +38,8 @@ namespace DataGamingInterface.Forms
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.labelInfoGame = new System.Windows.Forms.Label();
             this.buttonBack = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // checkedListBox1
@@ -109,12 +111,24 @@ namespace DataGamingInterface.Forms
             this.buttonBack.UseVisualStyleBackColor = true;
             this.buttonBack.Click += new System.EventHandler(this.ButtonBack_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::DataGamingInterface.Properties.Resources.obsidian;
+            this.pictureBox1.Image = global::DataGamingInterface.Properties.Resources.DataGamingInterfaceText;
+            this.pictureBox1.Location = new System.Drawing.Point(268, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(524, 76);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
             // FormGameEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::DataGamingInterface.Properties.Resources.obsidian;
             this.ClientSize = new System.Drawing.Size(804, 461);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.labelInfoGame);
             this.Controls.Add(this.textBox1);
@@ -126,6 +140,7 @@ namespace DataGamingInterface.Forms
             this.Name = "FormGameEdit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormGameEdit";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -140,5 +155,6 @@ namespace DataGamingInterface.Forms
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label labelInfoGame;
         private System.Windows.Forms.Button buttonBack;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

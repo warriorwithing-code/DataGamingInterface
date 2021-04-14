@@ -13,13 +13,19 @@ namespace Aplication.Process
     public class AplicationProcess
     {
         Map map = new Map();
-        GamesRepository repository = new GamesRepository();
+        GamesRepository repositoryGames = new GamesRepository();
+        GenderRepository repositoryGender = new GenderRepository();
 
         public void SaveGame(GameDto gameDto)
         {
             Game game = new Game();
             game = map.Game_Map(gameDto);
-            repository.add(game);
+            repositoryGames.add(game);
+        }
+
+        public List<string> Get_ListGender()
+        {
+             return repositoryGender.Get_List();
         }
     }
 }

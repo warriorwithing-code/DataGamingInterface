@@ -12,7 +12,7 @@ namespace DataGamingInterface.Forms
 {
     public partial class FormGameEdit : Form
     {
-        FormAddGame formAddGame = new FormAddGame();
+        FormAddGame formAddGame;
         FormHome formHome;
 
         public FormGameEdit()
@@ -32,6 +32,7 @@ namespace DataGamingInterface.Forms
 
         private void ButtonAddNewGame_Click(object sender, EventArgs e)
         {
+            formAddGame = new FormAddGame();
             formAddGame.ShowDialog();
         }
 
