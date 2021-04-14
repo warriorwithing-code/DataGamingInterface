@@ -15,10 +15,13 @@ namespace Aplication.Process
         Map map = new Map();
         GamesRepository repositoryGames = new GamesRepository();
         GenderRepository repositoryGender = new GenderRepository();
+        Game game;
+        GameDto gameDto;
+        GenderDto genderDto;
 
         public void SaveGame(GameDto gameDto)
         {
-            Game game = new Game();
+            game = new Game();
             game = map.Game_Map(gameDto);
             repositoryGames.add(game);
         }
@@ -26,6 +29,14 @@ namespace Aplication.Process
         public List<string> Get_ListGender()
         {
              return repositoryGender.Get_List();
+        }
+
+        public void ConstructDto(string name, string gender)
+        {
+            gameDto = new GameDto();
+            genderDto = new GenderDto();
+            gameDto.Name = name;
+            genderDto.Type = gender;
         }
     }
 }

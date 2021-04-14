@@ -11,11 +11,11 @@ namespace BBDD.Repositories
 
         public List<string> Get_List()
         {
-            List<Gender> tablaGender = new List<Gender>();
+            List<Domain.Entities.Gender> tablaGender = new List<Domain.Entities.Gender>();
             List<string> resultGenderType = new List<string>();
             using (DataGamingInterfaceDataBaseEntities db = new DataGamingInterfaceDataBaseEntities())
             {
-                tablaGender = (from d in db.Gender select new Gender {Type = d.Type }).ToList();
+                tablaGender = (from d in db.Gender select new Domain.Entities.Gender { Type = d.Type }).ToList();
             }
             foreach (var b in tablaGender)
             {

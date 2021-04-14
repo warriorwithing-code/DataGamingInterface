@@ -9,7 +9,7 @@ namespace Domain.Entities
     public class Gender
     {
         private int Id { get; set; }
-        private string Type { get; set; }
+        public string Type { get; set; }
         public string Subtype { get; set; }
 
         #region Id
