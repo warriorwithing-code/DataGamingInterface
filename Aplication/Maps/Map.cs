@@ -15,12 +15,28 @@ namespace Aplication.Maps
             Game gameEntity = new Game();
             gameEntity.setName(gameDto.Name);
             gameEntity.setInfo((gameDto.Info == null) ? "":gameDto.Info);
+            gameEntity.setGenderId(gameDto.GenderId);
             return gameEntity;
         }
 
-        public void Gender_Map(GenderDto genderDto)
+        public Gender Gender_MapDtoIntoEntitie(GenderDto genderDto)
         {
+            Gender genderEntity = new Gender();
+            genderEntity.Type = genderDto.Type;
+            return genderEntity;
+        }
 
+        public GenderDto Gender_MapEntitieToDto(Gender gender)
+        {
+            GenderDto genderDto = new GenderDto();
+            AssignAttributes(gender, genderDto);
+            return genderDto;
+        }
+
+        private static void AssignAttributes(Gender gender, GenderDto genderDto)
+        {
+            genderDto.Id = gender.Id;
+            genderDto.Type = gender.Type;
         }
     }
 }

@@ -1,4 +1,7 @@
-﻿namespace DataGamingInterface.Forms
+﻿using Aplication.Dto;
+using System.Collections.Generic;
+
+namespace DataGamingInterface.Forms
 {
     partial class FormAddGame
     {
@@ -37,6 +40,7 @@
             this.comboBoxSelectGender = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.LabelErrorGender = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,8 +90,8 @@
             this.textBoxAddGame.Size = new System.Drawing.Size(121, 20);
             this.textBoxAddGame.TabIndex = 4;
             this.textBoxAddGame.Text = "Introduzca nombre";
-            this.textBoxAddGame.TextChanged += new System.EventHandler(this.TextBoxAddGame_TextChanged);
             this.textBoxAddGame.Click += new System.EventHandler(this.TextBoxAddGame_Click);
+            this.textBoxAddGame.TextChanged += new System.EventHandler(this.TextBoxAddGame_TextChanged);
             // 
             // textBox2
             // 
@@ -127,12 +131,25 @@
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
+            // LabellabelGender
+            // 
+            this.LabelErrorGender.AutoSize = true;
+            this.LabelErrorGender.Font = new System.Drawing.Font("Matrix", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelErrorGender.ForeColor = System.Drawing.Color.Red;
+            this.LabelErrorGender.Location = new System.Drawing.Point(150, 208);
+            this.LabelErrorGender.Name = "Error Gender";
+            this.LabelErrorGender.Size = new System.Drawing.Size(128, 14);
+            this.LabelErrorGender.TabIndex = 9;
+            this.LabelErrorGender.Text = "Introduzca un Genero";
+            this.LabelErrorGender.Hide();
+            // 
             // FormAddGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::DataGamingInterface.Properties.Resources.obsidian;
             this.ClientSize = new System.Drawing.Size(426, 314);
+            this.Controls.Add(this.LabelErrorGender);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.comboBoxSelectGender);
@@ -153,9 +170,11 @@
 
         public void añadelista()
         {
+            listGender = new List<GenderDto>();
             foreach (var x in processInterface.Get_ListGender())
             {
-                this.comboBoxSelectGender.Items.Add(x);
+                listGender.Add(x);
+                this.comboBoxSelectGender.Items.Add(x.Type);
             }
         }
         
@@ -171,5 +190,6 @@
         private System.Windows.Forms.ComboBox comboBoxSelectGender;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label LabelErrorGender;
     }
 }

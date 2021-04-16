@@ -1,4 +1,5 @@
-﻿using Aplication.Process;
+﻿using Aplication.Dto;
+using Aplication.Process;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,9 @@ namespace DataGamingInterface.Forms
     public partial class FormAddGame : Form
     {
         AplicationProcess processInterface = new AplicationProcess();
+        GenderDto genderDto;
+        GameDto gameDto;
+        List<GenderDto> listGender;
         public FormAddGame()
         {
             InitializeComponent();
@@ -27,7 +31,15 @@ namespace DataGamingInterface.Forms
 
         private void ButtonAddGame_Click(object sender, EventArgs e)
         {
-
+            if (comboBoxSelectGender.Text == "Seleccione genero")
+            {
+                LabelErrorGender.Show();
+            }
+            else
+            {
+                CreateGameDto();
+                processInterface.SaveGame(gameDto);
+            }
         }
 
         private void ButtonAddGender_Click(object sender, EventArgs e)
@@ -48,10 +60,29 @@ namespace DataGamingInterface.Forms
 
         private void ComboBoxSelectGender_SelectedIndexChanged(object sender, EventArgs e)
         {
-            foreach (var x in processInterface.Get_ListGender())
+            //listGender = new List<GenderDto>();
+            //foreach (var x in processInterface.Get_ListGender())
+            //{
+            //    listGender.Add(x);
+            //    this.comboBoxSelectGender.Items.Add(x.Type);
+            //}
+        }
+
+        private int SelectGender()
+        {
+            foreach (var x in listGender)
             {
-                this.comboBoxSelectGender.Items.Add(x);
-            }
+                if (x.Type == comboBoxSelectGender.SelectedItem.ToString())
+                    return x.Id;
+            };
+            return 1;
+        }
+
+        private void CreateGameDto()
+        {
+            gameDto = new GameDto();
+            gameDto.Name = textBoxAddGame.Text;
+            gameDto.GenderId = SelectGender();
         }
     }
 }

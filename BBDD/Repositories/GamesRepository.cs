@@ -17,6 +17,7 @@ namespace BBDD.Repositories
                 Games gameSave = new Games();
                 gameSave.Name = game.getName();
                 gameSave.Info = game.getInfo();
+                gameSave.GenderId = game.getGenderId();
 
                 db.Games.Add(gameSave);
                 db.SaveChanges();
@@ -26,11 +27,6 @@ namespace BBDD.Repositories
         public void add()
         {
             throw new NotImplementedException();
-        }
-
-        public void add_Gender()
-        {
-            Gender gender = new Gender();
         }
 
         public void delete()

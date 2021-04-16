@@ -16,8 +16,10 @@ namespace Aplication.Process
         GamesRepository repositoryGames = new GamesRepository();
         GenderRepository repositoryGender = new GenderRepository();
         Game game;
+        Gender gender;
         GameDto gameDto;
         GenderDto genderDto;
+        List<GenderDto> listGenderDto;
 
         public void SaveGame(GameDto gameDto)
         {
@@ -25,18 +27,29 @@ namespace Aplication.Process
             game = map.Game_Map(gameDto);
             repositoryGames.add(game);
         }
-
-        public List<string> Get_ListGender()
+        public void SaveGender(GenderDto genderDto)
         {
-             return repositoryGender.Get_List();
+            gender = new Gender();
+            gender = map.Gender_MapDtoIntoEntitie(genderDto);
+            repositoryGender.add(gender);
         }
 
-        public void ConstructDto(string name, string gender)
+        public List<GenderDto> Get_ListGender()
+        {
+            listGenderDto = new List<GenderDto>();
+            foreach (var x in repositoryGender.Get_List())
+            {
+               listGenderDto.Add(map.Gender_MapEntitieToDto(x));
+            }
+            return listGenderDto;
+        }
+
+        public void ConstructDto(string nameGame, string nameGender)
         {
             gameDto = new GameDto();
             genderDto = new GenderDto();
-            gameDto.Name = name;
-            genderDto.Type = gender;
+            gameDto.Name = nameGame;
+            genderDto.Type = nameGender;
         }
     }
 }

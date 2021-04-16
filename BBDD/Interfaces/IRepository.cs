@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Domain.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,7 @@ namespace BBDD.Interfaces
 {
     public interface IRepository
     {
-        void add();
+        void add(Game game);
         void delete();
     }
 }

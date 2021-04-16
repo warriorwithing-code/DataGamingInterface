@@ -8,7 +8,7 @@ namespace Domain.Entities
 {
     public class Gender
     {
-        private int Id { get; set; }
+        public int Id { get; set; }
         public string Type { get; set; }
         public string Subtype { get; set; }
 
