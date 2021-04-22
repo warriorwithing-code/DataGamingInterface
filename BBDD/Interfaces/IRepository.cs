@@ -10,6 +10,6 @@ namespace BBDD.Interfaces
     public interface IRepository
     {
         void add(Game game);
-        void delete();
+        void delete(Game game);
     }
 }

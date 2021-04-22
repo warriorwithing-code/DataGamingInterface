@@ -51,5 +51,36 @@ namespace Aplication.Process
             gameDto.Name = nameGame;
             genderDto.Type = nameGender;
         }
+
+        public List<GameDto> Get_ListGames()
+        {
+            List<GameDto> ListGamesDto = new List<GameDto>();
+            foreach (var x in repositoryGames.GetGamesList())
+            {
+                ListGamesDto.Add(map.Game_MapEntitieToDto(x));
+            }
+            return ListGamesDto;
+        }
+
+        public void DeleteGame(GameDto gameDto)
+        {
+            game = new Game();
+            game = map.Game_Map(gameDto);
+            repositoryGames.delete(game);
+        }
+
+        public void DeleteGender(GenderDto genderDto)
+        {
+            gender = new Gender();
+            gender = map.Gender_MapDtoIntoEntitie(genderDto);
+            repositoryGender.delete(gender);
+        }
+
+        public void ModifiedGame(GameDto gameDto)
+        {
+            game = new Game();
+            game = map.Game_MapDtoIntoEntitie(gameDto);
+            repositoryGames.EditGame(game);
+        }
     }
 }

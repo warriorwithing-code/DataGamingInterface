@@ -15,6 +15,7 @@ namespace BBDD.Repositories
             using (DataGamingInterfaceDataBaseEntities db =new DataGamingInterfaceDataBaseEntities())
             {
                 Games gameSave = new Games();
+                gameSave.Id = game.getId();
                 gameSave.Name = game.getName();
                 gameSave.Info = game.getInfo();
                 gameSave.GenderId = game.getGenderId();
@@ -24,24 +25,39 @@ namespace BBDD.Repositories
             }
         }
 
-        public void add()
+        public void delete(Game game)
         {
-            throw new NotImplementedException();
+            using (DataGamingInterfaceDataBaseEntities db = new DataGamingInterfaceDataBaseEntities())
+            {
+                Games gameDeleted = new Games();
+                gameDeleted = db.Games.Where(b => b.Id == game.Id).ToList().First();
+                db.Games.Remove(gameDeleted);
+            }
         }
 
-        public void delete()
+        public List<Domain.Entities.Game> GetGamesList()
         {
-            throw new NotImplementedException();
+            List<Domain.Entities.Game> listGames = new List<Domain.Entities.Game>();
+            using (DataGamingInterfaceDataBaseEntities db = new DataGamingInterfaceDataBaseEntities())
+            {
+                listGames = (from d in db.Games select new Domain.Entities.Game { Id = d.Id, Name = d.Name, GenderId = d.GenderId, Info= d.Info}).ToList();
+            }
+            return listGames;
         }
 
-        public void load_Game()
+
+        public void EditGame(Game game)
         {
-
-        }
-
-        public void load_Games()
-        {
-
+            using (DataGamingInterfaceDataBaseEntities db = new DataGamingInterfaceDataBaseEntities())
+            {
+                Games gameModified = new Games();
+                gameModified = db.Games.Where(b => b.Id == game.Id).First();
+                if (gameModified != null)
+                {
+                    gameModified.Info = game.Info;
+                    db.SaveChanges();
+                }
+            }
         }
     }
 }

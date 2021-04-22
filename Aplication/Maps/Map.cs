@@ -13,6 +13,7 @@ namespace Aplication.Maps
         public Game Game_Map(GameDto gameDto)
         {
             Game gameEntity = new Game();
+            gameEntity.setId(gameDto.Id);
             gameEntity.setName(gameDto.Name);
             gameEntity.setInfo((gameDto.Info == null) ? "":gameDto.Info);
             gameEntity.setGenderId(gameDto.GenderId);
@@ -23,6 +24,7 @@ namespace Aplication.Maps
         {
             Gender genderEntity = new Gender();
             genderEntity.Type = genderDto.Type;
+            genderEntity.Id = genderDto.Id;
             return genderEntity;
         }
 
@@ -31,6 +33,36 @@ namespace Aplication.Maps
             GenderDto genderDto = new GenderDto();
             AssignAttributes(gender, genderDto);
             return genderDto;
+        }
+
+        public Game Game_MapDtoIntoEntitie(GameDto gameDto)
+        {
+            Game gameEntity = new Game();
+            MapGameDto(gameDto, gameEntity);
+            return gameEntity;
+        }
+
+        private static void MapGameDto(GameDto gameDto, Game gameEntity)
+        {
+            gameEntity.Id = gameDto.Id;
+            gameEntity.Name = gameDto.Name;
+            gameEntity.GenderId = gameDto.GenderId;
+            gameEntity.Info = gameDto.Info;
+        }
+
+        private static void MapGameEntitie(GameDto gameDto, Game gameEntity)
+        {
+            gameDto.Id = gameEntity.Id;
+            gameDto.Name = gameEntity.Name;
+            gameDto.GenderId = gameEntity.GenderId;
+            gameDto.Info = gameEntity.Info;
+        }
+
+        public GameDto Game_MapEntitieToDto(Game gameEntity)
+        {
+            GameDto gameDto = new GameDto();
+            MapGameEntitie(gameDto, gameEntity);
+            return gameDto;
         }
 
         private static void AssignAttributes(Gender gender, GenderDto genderDto)

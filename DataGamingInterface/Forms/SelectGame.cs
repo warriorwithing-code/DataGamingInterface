@@ -1,4 +1,6 @@
-﻿using DataGamingInterface.Process;
+﻿using Aplication.Dto;
+using Aplication.Process;
+using DataGamingInterface.Process;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,11 +18,15 @@ namespace DataGamingInterface.Forms
         List<string> ListGamesSelects = new List<string>();
         CheckBoxListOperations heckBoxListOperations = new CheckBoxListOperations();
         FormHome formHome = new FormHome();
-        OperationsGame operationsGame = new OperationsGame();
+        FormAddGame formAddGame;
+        FormGameEdit formGameEdit;
+        AplicationProcess processInterface = new AplicationProcess();
+        List<GameDto> listGamesDto = new List<GameDto>();
 
         public SelectGame()
         {
             InitializeComponent();
+            GetListGames();
         }
 
         private void CheckedListBoxSelectGame_SelectedIndexChanged(object sender, EventArgs e)
@@ -41,18 +47,23 @@ namespace DataGamingInterface.Forms
 
         private void ButtonAdd_Click(object sender, EventArgs e)
         {
-            operationsGame.Add_Game(textBoxResult.Text);
-            this.checkedListBoxSelectGame.Items.Add(textBoxResult.Text);
+            formAddGame = new FormAddGame();
+            formAddGame.TransferDates(listGamesDto);
+            formAddGame.ShowDialog();
         }
 
         private void ButtonUpdate_Click(object sender, EventArgs e)
         {
-            RellenarItems();
+            checkedListBoxSelectGame.Items.Clear();
+            GetListGames();
         }
 
         private void ButtonSearchGame_Click(object sender, EventArgs e)
         {
-
+            formGameEdit = new FormGameEdit();
+            this.Hide();
+            formGameEdit.ShowDialog();
+            this.Close();
         }
 
         private void CheckedListBoxGamesPrepared_SelectedIndexChanged(object sender, EventArgs e)

@@ -8,10 +8,10 @@ namespace Domain.Entities
 {
     public class Game
     {
-        private int Id;
-        private string Name;
-        private int GenderId;
-        private string Info;
+        public int Id;
+        public string Name;
+        public int GenderId;
+        public string Info;
 
         #region Id
         public int getId()

@@ -22,6 +22,7 @@ namespace DataGamingInterface.Process
             items.Add("Mordhau");
             items.Add("Age of empires");
             items.Add("Soulstorm");
+            items.Add("Soulstorm");
             return items;
         }
 
