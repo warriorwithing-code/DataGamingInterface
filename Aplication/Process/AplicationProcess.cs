@@ -46,14 +46,6 @@ namespace Aplication.Process
             return listGenderDto;
         }
 
-        public void ConstructDto(string nameGame, string nameGender)
-        {
-            gameDto = new GameDto();
-            genderDto = new GenderDto();
-            gameDto.Name = nameGame;
-            genderDto.Type = nameGender;
-        }
-
         public List<GameDto> Get_ListGames()
         {
             List<GameDto> ListGamesDto = new List<GameDto>();

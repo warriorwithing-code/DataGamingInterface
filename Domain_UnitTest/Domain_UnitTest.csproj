@@ -5,11 +5,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{422F62D4-9832-42E9-81C0-7CB1ED9492A7}</ProjectGuid>
+    <ProjectGuid>{BA26A3C2-98EB-4B43-81AA-2AED4C628A5D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DataGamingInterface_UnitTest</RootNamespace>
-    <AssemblyName>DataGamingInterface_UnitTest</AssemblyName>
+    <RootNamespace>Domain_UnitTest</RootNamespace>
+    <AssemblyName>Domain_UnitTest</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -49,16 +49,16 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CheckListOperationsTest.cs" />
+    <Compile Include="SelectGameLogicTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DataGamingInterface\DataGamingInterface.csproj">
-      <Project>{25fcb0ce-9245-4a3d-8659-b85ab45346fc}</Project>
-      <Name>DataGamingInterface</Name>
+    <ProjectReference Include="..\Domain\Domain.csproj">
+      <Project>{f05e55b3-4e8d-4a26-83e6-2c5ac6ed9aff}</Project>
+      <Name>Domain</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

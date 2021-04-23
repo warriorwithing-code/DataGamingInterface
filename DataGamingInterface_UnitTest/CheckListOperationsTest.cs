@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace DataGamingInterface_UnitTest
 {
     [TestClass]
-    public class UnitTest1
+    public class CheckListOperationsTest
     {
         [TestMethod]
         public void TestMethod1()
