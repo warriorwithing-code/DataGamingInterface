@@ -39,6 +39,7 @@ namespace BBDD.Repositories
                 Gender genderDeleted = new Gender();
                 genderDeleted = db.Gender.Where(b => b.Id == gender.Id).ToList().First();
                 db.Gender.Remove(genderDeleted);
+                db.SaveChanges();
             }
         }
     }

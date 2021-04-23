@@ -32,6 +32,7 @@ namespace BBDD.Repositories
                 Games gameDeleted = new Games();
                 gameDeleted = db.Games.Where(b => b.Id == game.Id).ToList().First();
                 db.Games.Remove(gameDeleted);
+                db.SaveChanges();
             }
         }
 
