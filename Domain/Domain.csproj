@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Entities\Game.cs" />
     <Compile Include="Entities\Gender.cs" />
+    <Compile Include="ISelectGameLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SelectGameLogic.cs" />
   </ItemGroup>

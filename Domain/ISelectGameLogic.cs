@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BBDD
+namespace Domain
 {
-    public class Connection
+    public interface ISelectGameLogic
     {
+        string Roll_Dice(List<string> items);
     }
 }

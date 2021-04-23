@@ -92,7 +92,6 @@ namespace DataGamingInterface.Forms
             this.textBoxInfoGame.Name = "textBoxInfoGame";
             this.textBoxInfoGame.Size = new System.Drawing.Size(224, 203);
             this.textBoxInfoGame.TabIndex = 4;
-            this.textBoxInfoGame.TextChanged += new System.EventHandler(this.TextBoxInfoGame_TextChanged);
             // 
             // labelInfoGame
             // 
@@ -168,6 +167,7 @@ namespace DataGamingInterface.Forms
             this.Name = "FormGameEdit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormGameEdit";
+            this.Load += new System.EventHandler(this.FormGameEdit_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

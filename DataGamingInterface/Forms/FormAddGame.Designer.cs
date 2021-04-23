@@ -42,7 +42,7 @@ namespace DataGamingInterface.Forms
             this.pictureBoxDTGI = new System.Windows.Forms.PictureBox();
             this.LabelErrorGender = new System.Windows.Forms.Label();
             this.labelErrorAddGender = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
+            this.buttonDeleteGame = new System.Windows.Forms.Button();
             this.buttonDelteGender = new System.Windows.Forms.Button();
             this.comboBoxDeleteGame = new System.Windows.Forms.ComboBox();
             this.comboBoxDeleteGender = new System.Windows.Forms.ComboBox();
@@ -97,7 +97,6 @@ namespace DataGamingInterface.Forms
             this.textBoxAddGame.TabIndex = 4;
             this.textBoxAddGame.Text = "Introduzca nombre";
             this.textBoxAddGame.Click += new System.EventHandler(this.TextBoxAddGame_Click);
-            this.textBoxAddGame.TextChanged += new System.EventHandler(this.TextBoxAddGame_TextChanged);
             // 
             // textBoxAddGender
             // 
@@ -116,7 +115,6 @@ namespace DataGamingInterface.Forms
             this.comboBoxSelectGender.Size = new System.Drawing.Size(121, 21);
             this.comboBoxSelectGender.TabIndex = 6;
             this.comboBoxSelectGender.Text = "Seleccione genero";
-            this.comboBoxSelectGender.SelectedIndexChanged += new System.EventHandler(this.ComboBoxSelectGender_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -162,15 +160,15 @@ namespace DataGamingInterface.Forms
             this.labelErrorAddGender.Text = "Escriba un Genero";
             this.labelErrorAddGender.Visible = false;
             // 
-            // button4
+            // buttonDeleteGame
             // 
-            this.button4.Location = new System.Drawing.Point(36, 139);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 34);
-            this.button4.TabIndex = 11;
-            this.button4.Text = "Eliminar Juego";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.ButtonDeleteGame_Click);
+            this.buttonDeleteGame.Location = new System.Drawing.Point(36, 139);
+            this.buttonDeleteGame.Name = "buttonDeleteGame";
+            this.buttonDeleteGame.Size = new System.Drawing.Size(75, 34);
+            this.buttonDeleteGame.TabIndex = 11;
+            this.buttonDeleteGame.Text = "Eliminar Juego";
+            this.buttonDeleteGame.UseVisualStyleBackColor = true;
+            this.buttonDeleteGame.Click += new System.EventHandler(this.ButtonDeleteGame_Click);
             // 
             // buttonDelteGender
             // 
@@ -222,7 +220,7 @@ namespace DataGamingInterface.Forms
             this.Controls.Add(this.comboBoxDeleteGender);
             this.Controls.Add(this.comboBoxDeleteGame);
             this.Controls.Add(this.buttonDelteGender);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.buttonDeleteGame);
             this.Controls.Add(this.labelErrorAddGender);
             this.Controls.Add(this.LabelErrorGender);
             this.Controls.Add(this.pictureBoxDTGI);
@@ -237,6 +235,8 @@ namespace DataGamingInterface.Forms
             this.Name = "FormAddGame";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormAddGame";
+            this.Load += new System.EventHandler(this.FormAddGame_Load);
+            this.Click += new System.EventHandler(this.FormAddGame_Click);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDTGI)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -255,7 +255,7 @@ namespace DataGamingInterface.Forms
         private System.Windows.Forms.PictureBox pictureBoxDTGI;
         private System.Windows.Forms.Label LabelErrorGender;
         private System.Windows.Forms.Label labelErrorAddGender;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button buttonDeleteGame;
         private System.Windows.Forms.Button buttonDelteGender;
         private System.Windows.Forms.ComboBox comboBoxDeleteGame;
         private System.Windows.Forms.ComboBox comboBoxDeleteGender;

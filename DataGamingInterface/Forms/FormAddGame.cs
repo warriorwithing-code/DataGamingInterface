@@ -81,20 +81,10 @@ namespace DataGamingInterface.Forms
                 textBoxAddGender.Clear();
         }
 
-        private void TextBoxAddGame_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
         private void TextBoxAddGame_Click(object sender, EventArgs e)
         {
             if(textBoxAddGame.Text == "Introduzca nombre")
                 textBoxAddGame.Clear();
-        }
-
-        private void ComboBoxSelectGender_SelectedIndexChanged(object sender, EventArgs e)
-        {
-           
         }
 
         private int SelectGender()
@@ -186,6 +176,20 @@ namespace DataGamingInterface.Forms
                 listGamesDto.Add(x);
                 this.comboBoxDeleteGame.Items.Add(x.Name);
             }
+        }
+
+        private void FormAddGame_Load(object sender, EventArgs e)
+        {
+            labelCorrectSave.Visible = false;
+            labelErrorAddGender.Visible = false;
+            LabelErrorGender.Visible = false;
+        }
+
+        private void FormAddGame_Click(object sender,EventArgs e)
+        {
+            labelCorrectSave.Visible = false;
+            labelErrorAddGender.Visible = false;
+            LabelErrorGender.Visible = false;
         }
     }
 }

@@ -62,7 +62,6 @@ namespace DataGamingInterface.Forms
                 labelGoodModified.Text = "No se guardo correctamente";
                 labelGoodModified.ForeColor = System.Drawing.Color.Red;
             }
-            
         }
 
         private void CreateGameDto(GameDto gameModified)
@@ -97,9 +96,9 @@ namespace DataGamingInterface.Forms
             }
         }
 
-        private void TextBoxInfoGame_TextChanged(object sender, EventArgs e)
+        private void FormGameEdit_Load(object sender, EventArgs e)
         {
-
+            labelGoodModified.Visible = false;
         }
     }
 }

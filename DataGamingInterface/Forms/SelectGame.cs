@@ -16,7 +16,7 @@ namespace DataGamingInterface.Forms
     public partial class SelectGame : Form
     {
         List<string> ListGamesSelects = new List<string>();
-        CheckBoxListOperations heckBoxListOperations = new CheckBoxListOperations();
+        CheckBoxListOperations checkBoxListOperations = new CheckBoxListOperations();
         FormHome formHome = new FormHome();
         FormAddGame formAddGame;
         FormGameEdit formGameEdit;
@@ -80,7 +80,12 @@ namespace DataGamingInterface.Forms
 
         private void ButtonRoll_Click(object sender, EventArgs e)
         {
-            var gamePlay = heckBoxListOperations.Roll_Dice(CheckedListBoxGamesPrepared.Items);
+            List<string> listGamesPrepared = new List<string>();
+            foreach (var x in CheckedListBoxGamesPrepared.Items)
+            {
+                listGamesPrepared.Add(x.ToString());
+            }
+            var gamePlay = checkBoxListOperations.Roll_Dice(listGamesPrepared);
             textBoxShowGame.Text = gamePlay;
         }
 

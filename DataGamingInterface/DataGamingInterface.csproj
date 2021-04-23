@@ -87,7 +87,6 @@
       <DependentUpon>SelectGame.cs</DependentUpon>
     </Compile>
     <Compile Include="Process\CheckBoxListOperations.cs" />
-    <Compile Include="Process\OperationsGame.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\FormAddGame.resx">

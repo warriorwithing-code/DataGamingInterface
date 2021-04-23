@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Aplication.Dto;
 using Aplication.Maps;
 using BBDD.Repositories;
+using Domain;
 using Domain.Entities;
 
 namespace Aplication.Process
@@ -20,6 +21,7 @@ namespace Aplication.Process
         GameDto gameDto;
         GenderDto genderDto;
         List<GenderDto> listGenderDto;
+        SelectGameLogic selectGameLogic= new SelectGameLogic();
 
         public void SaveGame(GameDto gameDto)
         {
@@ -81,6 +83,11 @@ namespace Aplication.Process
             game = new Game();
             game = map.Game_MapDtoIntoEntitie(gameDto);
             repositoryGames.EditGame(game);
+        }
+
+        public string Roll_Dice(List<string> listGamesPrepared)
+        {
+            return selectGameLogic.Roll_Dice(listGamesPrepared);
         }
     }
 }
