@@ -46,15 +46,16 @@ namespace DataGamingInterface.Forms
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.labelGameResult = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // checkedListBoxSelectGame
             // 
             this.checkedListBoxSelectGame.FormattingEnabled = true;
-            this.checkedListBoxSelectGame.Location = new System.Drawing.Point(29, 21);
+            this.checkedListBoxSelectGame.Location = new System.Drawing.Point(29, 66);
             this.checkedListBoxSelectGame.Name = "checkedListBoxSelectGame";
-            this.checkedListBoxSelectGame.Size = new System.Drawing.Size(199, 364);
+            this.checkedListBoxSelectGame.Size = new System.Drawing.Size(199, 319);
             this.checkedListBoxSelectGame.TabIndex = 0;
             this.checkedListBoxSelectGame.SelectedIndexChanged += new System.EventHandler(this.CheckedListBoxSelectGame_SelectedIndexChanged);
             // 
@@ -154,14 +155,24 @@ namespace DataGamingInterface.Forms
             this.label1.TabIndex = 12;
             this.label1.Text = "Juegos preparados para roll";
             // 
-            // label2
+            // labelGameResult
             // 
             this.labelGameResult.AutoSize = true;
             this.labelGameResult.Location = new System.Drawing.Point(395, 171);
-            this.labelGameResult.Name = "GameResult";
+            this.labelGameResult.Name = "labelGameResult";
             this.labelGameResult.Size = new System.Drawing.Size(87, 13);
             this.labelGameResult.TabIndex = 13;
             this.labelGameResult.Text = "Resultado Juego";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Matrix", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(79, 33);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(90, 14);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "Lista de juegos";
             // 
             // SelectGame
             // 
@@ -169,6 +180,7 @@ namespace DataGamingInterface.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::DataGamingInterface.Properties.Resources.obsidian;
             this.ClientSize = new System.Drawing.Size(804, 461);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.labelGameResult);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
@@ -190,7 +202,6 @@ namespace DataGamingInterface.Forms
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-
 
         }
 
@@ -218,5 +229,6 @@ namespace DataGamingInterface.Forms
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelGameResult;
+        private System.Windows.Forms.Label label2;
     }
 }

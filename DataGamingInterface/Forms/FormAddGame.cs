@@ -72,6 +72,8 @@ namespace DataGamingInterface.Forms
                 genderDto.Type = textBoxAddGender.Text;
                 processInterface.SaveGender(genderDto);
                 labelCorrectSave.Show();
+                comboBoxSelectGender.Items.Clear();
+                GetListGender();
             }
         }
 

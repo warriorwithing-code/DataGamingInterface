@@ -52,7 +52,7 @@ namespace DataGamingInterface.Forms
             this.checkedListBoxGames.Name = "checkedListBoxGames";
             this.checkedListBoxGames.Size = new System.Drawing.Size(260, 274);
             this.checkedListBoxGames.TabIndex = 0;
-            this.checkedListBoxGames.SelectedIndexChanged += new System.EventHandler(this.CheckedListBox1_SelectedIndexChanged);
+            this.checkedListBoxGames.SelectedIndexChanged += new System.EventHandler(this.CheckedListBoxGames_SelectedIndexChanged);
             // 
             // ButtonEditGameAndSave
             // 

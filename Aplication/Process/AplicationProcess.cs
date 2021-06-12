@@ -18,8 +18,6 @@ namespace Aplication.Process
         GenderRepository repositoryGender = new GenderRepository();
         Game game;
         Gender gender;
-        GameDto gameDto;
-        GenderDto genderDto;
         List<GenderDto> listGenderDto;
         SelectGameLogic selectGameLogic= new SelectGameLogic();
 

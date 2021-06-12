@@ -36,12 +36,18 @@
             // 
             // buttonEnter
             // 
-            this.buttonEnter.Location = new System.Drawing.Point(303, 196);
+            this.buttonEnter.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonEnter.BackgroundImage = global::DataGamingInterface.Properties.Resources.button2;
+            this.buttonEnter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonEnter.Font = new System.Drawing.Font("Matrix", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEnter.ForeColor = System.Drawing.Color.Yellow;
+            this.buttonEnter.Location = new System.Drawing.Point(333, 215);
             this.buttonEnter.Name = "buttonEnter";
+            this.buttonEnter.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.buttonEnter.Size = new System.Drawing.Size(140, 70);
             this.buttonEnter.TabIndex = 0;
             this.buttonEnter.Text = "Entrar";
-            this.buttonEnter.UseVisualStyleBackColor = true;
+            this.buttonEnter.UseVisualStyleBackColor = false;
             this.buttonEnter.Click += new System.EventHandler(this.ButtonEnter_Click);
             // 
             // pictureBox1

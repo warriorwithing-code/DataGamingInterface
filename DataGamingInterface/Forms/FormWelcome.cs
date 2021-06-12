@@ -21,7 +21,9 @@ namespace DataGamingInterface
 
         private void ButtonEnter_Click(object sender, EventArgs e)
         {
+            buttonEnter.BackgroundImage = Properties.Resources.button;
             formHome = new FormHome();
+            buttonEnter.BackgroundImage = Properties.Resources.button2;
             this.Hide();
             formHome.ShowDialog();
             this.Close();

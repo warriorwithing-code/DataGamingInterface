@@ -26,7 +26,7 @@ namespace DataGamingInterface.Forms
             GetListGames();
         }
 
-        private void CheckedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void CheckedListBoxGames_SelectedIndexChanged(object sender, EventArgs e)
         {
             labelGame.Text = checkedListBoxGames.SelectedItem.ToString();
             labelGame.Show();
@@ -41,29 +41,30 @@ namespace DataGamingInterface.Forms
 
         private void ButtonEditGameAndSave_Click(object sender, EventArgs e)
         {
-            try
+            gameDto = new GameDto();
+            foreach (var x in listGamesDto)
             {
-                gameDto = new GameDto();
-                foreach (var x in listGamesDto)
+                if (checkedListBoxGames.SelectedItem.ToString() == x.Name)
                 {
-                    if (checkedListBoxGames.SelectedItem.ToString() == x.Name)
+                    CreateGameDto(x);
+                    try
                     {
-                        CreateGameDto(x);
                         processInterface.ModifiedGame(gameDto);
                         checkedListBoxGames.Items.Clear();
                         GetListGames();
                         labelGoodModified.Text = "Se a editado Correctamente";
                         labelGoodModified.Show();
+                        break;
                     }
+                    catch (Exception exception)
+                    {
+                        labelGoodModified.Text = "No se guardo correctamente";
+                        labelGoodModified.ForeColor = System.Drawing.Color.Red;
+                    }
+
                 }
             }
-            catch (Exception exception)
-            {
-                labelGoodModified.Text = "No se guardo correctamente";
-                labelGoodModified.ForeColor = System.Drawing.Color.Red;
-            }
         }
-
         private void CreateGameDto(GameDto gameModified)
         {
             gameDto.Id = gameModified.Id;

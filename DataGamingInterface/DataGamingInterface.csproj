@@ -135,6 +135,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\Images\button.png" />
+    <Content Include="Resources\Images\button2.png" />
     <Content Include="Resources\Images\DataGaming.ico" />
     <Content Include="Resources\Images\DataGamingInterfaceText.png" />
     <Content Include="Resources\Images\external-content.duckduckgo.com.png" />
