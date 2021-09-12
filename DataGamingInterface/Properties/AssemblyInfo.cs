@@ -6,12 +6,12 @@ using System.Runtime.InteropServices;
 // conjunto de atributos. Cambie estos valores de atributo para modificar la información
 // asociada con un ensamblado.
 [assembly: AssemblyTitle("DataGamingInterface")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Aplicacion selector de juego")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Hugo Jose")]
+[assembly: AssemblyCompany("Hugo Jose Rodrigues")]
 [assembly: AssemblyProduct("DataGamingInterface")]
 [assembly: AssemblyCopyright("Copyright ©  2021")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyTrademark("Hugo Jose")]
 [assembly: AssemblyCulture("")]
 
 // Si establece ComVisible en false, los tipos de este ensamblado no estarán visibles 
