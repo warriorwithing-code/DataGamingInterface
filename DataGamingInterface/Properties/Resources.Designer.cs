@@ -63,9 +63,49 @@ namespace DataGamingInterface.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap external_content_duckduckgo_com {
+        internal static System.Drawing.Bitmap button {
             get {
-                object obj = ResourceManager.GetObject("external_content_duckduckgo_com", resourceCulture);
+                object obj = ResourceManager.GetObject("button", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap button2 {
+            get {
+                object obj = ResourceManager.GetObject("button2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap DataGamingInterfaceText {
+            get {
+                object obj = ResourceManager.GetObject("DataGamingInterfaceText", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap obsidian {
+            get {
+                object obj = ResourceManager.GetObject("obsidian", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap shield2_preview_rev_1 {
+            get {
+                object obj = ResourceManager.GetObject("shield2_preview_rev_1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

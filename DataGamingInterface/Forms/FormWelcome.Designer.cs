@@ -28,29 +28,54 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormWelcome));
             this.buttonEnter = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonEnter
             // 
-            this.buttonEnter.Location = new System.Drawing.Point(320, 260);
+            this.buttonEnter.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonEnter.BackgroundImage = global::DataGamingInterface.Properties.Resources.button2;
+            this.buttonEnter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonEnter.Font = new System.Drawing.Font("Matrix", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEnter.ForeColor = System.Drawing.Color.Yellow;
+            this.buttonEnter.Location = new System.Drawing.Point(333, 215);
             this.buttonEnter.Name = "buttonEnter";
-            this.buttonEnter.Size = new System.Drawing.Size(100, 30);
+            this.buttonEnter.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.buttonEnter.Size = new System.Drawing.Size(140, 70);
             this.buttonEnter.TabIndex = 0;
             this.buttonEnter.Text = "Entrar";
-            this.buttonEnter.UseVisualStyleBackColor = true;
+            this.buttonEnter.UseVisualStyleBackColor = false;
             this.buttonEnter.Click += new System.EventHandler(this.ButtonEnter_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::DataGamingInterface.Properties.Resources.obsidian;
+            this.pictureBox1.Image = global::DataGamingInterface.Properties.Resources.DataGamingInterfaceText;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(780, 141);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // FormWelcome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::DataGamingInterface.Properties.Resources.external_content_duckduckgo_com;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackgroundImage = global::DataGamingInterface.Properties.Resources.obsidian;
+            this.ClientSize = new System.Drawing.Size(804, 461);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.buttonEnter);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormWelcome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DataGamingInterface";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -58,6 +83,7 @@
         #endregion
 
         private System.Windows.Forms.Button buttonEnter;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
