@@ -173,6 +173,8 @@
     <Content Include="Resources\Images\DataGamingInterfaceText.png" />
     <Content Include="Resources\Images\external-content.duckduckgo.com.png" />
     <Content Include="Resources\Images\obsidian.jpg" />
+    <None Include="Resources\shield2_preview_rev_1.png" />
+    <None Include="Resources\shield2.jpg" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7">

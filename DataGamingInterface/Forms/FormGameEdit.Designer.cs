@@ -138,6 +138,7 @@ namespace DataGamingInterface.Forms
             // labelGoodModified
             // 
             this.labelGoodModified.AutoSize = true;
+            this.labelGoodModified.BackColor = System.Drawing.Color.Transparent;
             this.labelGoodModified.Font = new System.Drawing.Font("Matrix", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelGoodModified.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.labelGoodModified.Location = new System.Drawing.Point(326, 116);

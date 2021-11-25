@@ -38,31 +38,47 @@
             // 
             // buttonSelectGame
             // 
-            this.buttonSelectGame.Location = new System.Drawing.Point(303, 134);
+            this.buttonSelectGame.BackColor = System.Drawing.Color.Transparent;
+            this.buttonSelectGame.BackgroundImage = global::DataGamingInterface.Properties.Resources.shield2_preview_rev_1;
+            this.buttonSelectGame.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.buttonSelectGame.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSelectGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSelectGame.Location = new System.Drawing.Point(309, 154);
             this.buttonSelectGame.Name = "buttonSelectGame";
-            this.buttonSelectGame.Size = new System.Drawing.Size(190, 230);
+            this.buttonSelectGame.Size = new System.Drawing.Size(201, 205);
             this.buttonSelectGame.TabIndex = 0;
             this.buttonSelectGame.Text = "Seleccionar Juego";
-            this.buttonSelectGame.UseVisualStyleBackColor = true;
+            this.buttonSelectGame.UseVisualStyleBackColor = false;
             this.buttonSelectGame.Click += new System.EventHandler(this.ButtonSelectGame_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(580, 134);
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = global::DataGamingInterface.Properties.Resources.shield2_preview_rev_1;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(565, 154);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(190, 230);
+            this.button1.Size = new System.Drawing.Size(218, 205);
             this.button1.TabIndex = 1;
             this.button1.Text = "Feature(Not Function)";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // buttonGameEdit
             // 
-            this.buttonGameEdit.Location = new System.Drawing.Point(28, 134);
+            this.buttonGameEdit.BackColor = System.Drawing.Color.Transparent;
+            this.buttonGameEdit.BackgroundImage = global::DataGamingInterface.Properties.Resources.shield2_preview_rev_1;
+            this.buttonGameEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.buttonGameEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonGameEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonGameEdit.ForeColor = System.Drawing.Color.Black;
+            this.buttonGameEdit.Location = new System.Drawing.Point(46, 149);
             this.buttonGameEdit.Name = "buttonGameEdit";
-            this.buttonGameEdit.Size = new System.Drawing.Size(190, 230);
+            this.buttonGameEdit.Size = new System.Drawing.Size(201, 215);
             this.buttonGameEdit.TabIndex = 2;
             this.buttonGameEdit.Text = "Recursos de juego";
-            this.buttonGameEdit.UseVisualStyleBackColor = true;
+            this.buttonGameEdit.UseVisualStyleBackColor = false;
             this.buttonGameEdit.Click += new System.EventHandler(this.ButtonGameEdit_Click);
             // 
             // pictureBox1

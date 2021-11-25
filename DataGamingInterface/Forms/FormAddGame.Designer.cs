@@ -139,6 +139,7 @@ namespace DataGamingInterface.Forms
             // LabelErrorGender
             // 
             this.LabelErrorGender.AutoSize = true;
+            this.LabelErrorGender.BackColor = System.Drawing.Color.Transparent;
             this.LabelErrorGender.Font = new System.Drawing.Font("Matrix", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelErrorGender.ForeColor = System.Drawing.Color.Red;
             this.LabelErrorGender.Location = new System.Drawing.Point(145, 202);
@@ -151,6 +152,7 @@ namespace DataGamingInterface.Forms
             // labelErrorAddGender
             // 
             this.labelErrorAddGender.AutoSize = true;
+            this.labelErrorAddGender.BackColor = System.Drawing.Color.Transparent;
             this.labelErrorAddGender.Font = new System.Drawing.Font("Matrix", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelErrorAddGender.ForeColor = System.Drawing.Color.Red;
             this.labelErrorAddGender.Location = new System.Drawing.Point(305, 202);
@@ -201,6 +203,7 @@ namespace DataGamingInterface.Forms
             // labelCorrectSave
             // 
             this.labelCorrectSave.AutoSize = true;
+            this.labelCorrectSave.BackColor = System.Drawing.Color.Transparent;
             this.labelCorrectSave.Font = new System.Drawing.Font("Matrix", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCorrectSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.labelCorrectSave.Location = new System.Drawing.Point(133, 180);
